@@ -1,16 +1,17 @@
 package main
 
-import "fmt"
-import "os"
-import "net/http"
+import (
+	"fmt"
+	"net/http"
+	"os"
+)
 
-func handler(w http.ResponseWriter, r *http.Request){
+func handler(w http.ResponseWriter, r *http.Request) {
 
-h, err := os.Hostname()
+	h, err := os.Hostname()
 	if err == nil {
-  fmt.Fprint(w, h)
-  }
-
+		fmt.Fprint(w, h)
+	}
 
 }
 
